@@ -5,3 +5,4 @@ What each script in this directory is doing:
 2-bring_me_home - Change to home directory
 3-listfiles - Display current directory contents in a long format
 4-listmorefiles - Display current directory contents, including hidden files (starting with .). 
+5-listfilesdigitonly - List in long format with group IDs
