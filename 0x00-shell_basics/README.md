@@ -6,3 +6,5 @@ What each script in this directory is doing:
 3-listfiles - Display current directory contents in a long format
 4-listmorefiles - Display current directory contents, including hidden files (starting with .). 
 5-listfilesdigitonly - List in long format with group IDs
+6-firstdirectory - Creates new directory in the tmp directory
+7-movethatfile - Moves the file betty to tmp/my_first_directory
