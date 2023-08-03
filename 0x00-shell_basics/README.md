@@ -12,3 +12,4 @@ What each script in this directory is doing:
 9-firstdirdeletion - Deletes the my_first_directory above
 10-back - changes the working directory to the previous one
 11-lists - Prints contents of a number of directories
+12-file_type - Shows type of file
