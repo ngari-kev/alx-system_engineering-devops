@@ -9,3 +9,4 @@ This folder contains tasks on shell permissions
 6-multiple_permissions - Adds execute permission to owner and group and read permission to others
 7-everybody - gives aexecution permission to all
 8-James_Bond
+9-John_Doe - Changes mode to 753 of file hello
