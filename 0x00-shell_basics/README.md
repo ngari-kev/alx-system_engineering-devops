@@ -15,3 +15,4 @@ What each script in this directory is doing:
 12-file_type - Shows type of file
 13-symbolic_link - Creates a link to a file
 14-copy_html - Copies html files to parent. The files that do not exist or files that have changes
+100-lets_move - moves all files begining with an uppercase to /tmp/u
