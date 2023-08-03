@@ -9,3 +9,4 @@ What each script in this directory is doing:
 6-firstdirectory - Creates new directory in the tmp directory
 7-movethatfile - Moves the file betty to tmp/my_first_directory
 8-firstdelete - Delete the file betty
+9-firstdirdeletion - Deletes the my_first_directory above
