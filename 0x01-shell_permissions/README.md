@@ -13,3 +13,4 @@ This folder contains tasks on shell permissions
 10-mirror_permissions - mirrors permissions of olleh to hello
 11-directories_permissions - Adds execute permission to subdirectories
 12-directory_permissions - Create a dir with 781 permission
+13-change_group - changes group of file to school
