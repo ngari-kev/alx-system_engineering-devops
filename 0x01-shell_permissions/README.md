@@ -14,3 +14,4 @@ This folder contains tasks on shell permissions
 11-directories_permissions - Adds execute permission to subdirectories
 12-directory_permissions - Create a dir with 781 permission
 13-change_group - changes group of file to school
+100-change_owner_and_group - change group and staff for all dir and files in current dir.
