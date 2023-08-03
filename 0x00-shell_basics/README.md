@@ -13,3 +13,4 @@ What each script in this directory is doing:
 10-back - changes the working directory to the previous one
 11-lists - Prints contents of a number of directories
 12-file_type - Shows type of file
+13-symbolic_link - Creates a link to a file
