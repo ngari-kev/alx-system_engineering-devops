@@ -11,3 +11,4 @@ This folder contains tasks on shell permissions
 8-James_Bond
 9-John_Doe - Changes mode to 753 of file hello
 10-mirror_permissions - mirrors permissions of olleh to hello
+11-directories_permissions - Adds execute permission to subdirectories
