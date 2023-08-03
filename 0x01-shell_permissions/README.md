@@ -5,3 +5,4 @@ This folder contains tasks on shell permissions
 2-groups - Prints the groups current user is part of
 3-new_owner - Changes owner of file hello to betty
 4-empty - creates an empty file hello
+5-execute - Adds execute permission to owner
