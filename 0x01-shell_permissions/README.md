@@ -6,3 +6,4 @@ This folder contains tasks on shell permissions
 3-new_owner - Changes owner of file hello to betty
 4-empty - creates an empty file hello
 5-execute - Adds execute permission to owner
+6-multiple_permissions - Adds execute permission to owner and group and read permission to others
