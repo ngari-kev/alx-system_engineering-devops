@@ -7,10 +7,10 @@ PATTERN = /\[from:([\w\s+:]+)\] \[to:(\+\d+)\] \[flags:([^]]+)\]/
 def extract_info(log_entry)
     matches = log_entry.scan(PATTERN)
     if matches.any?
-        sender = matches[0][0]
-        receiver = matches[0][1]
+        from = matches[0][0]
+        to = matches[0][1]
         flags = matches[0][2]
-        puts "#{sender},#{receiver},#{flags}"
+        puts "#{from},#{to},#{flags}"
     end
 end
 
