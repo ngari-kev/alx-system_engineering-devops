@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 #define the RegEx pattern
-PATTERN = /\[from:([\w\s+:]+)\] \[to:(\+\d+)\] \[flags:([^]]+)\]/
+PATTERN = /\[from:([a-zA-Z\s+:]+|\+\d+)\] \[to:(\+[0-9]+)\] \[flags:([^]]+)\]/
 
 # Extract sender, receiver, and flags
 def extract_info(log_entry)
