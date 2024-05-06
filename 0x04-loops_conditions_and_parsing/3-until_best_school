@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-
-counter=0
-
 # print Best School until the counter reaches 10
+counter=0
 until [ $counter -ge 10 ]
 do
     ((counter++))
