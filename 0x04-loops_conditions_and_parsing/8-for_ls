@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Displays the contents of the current directory minus their prefix.
+for file in *; do
+    filename="${file#*-}"
+    echo "$filename"
+done
