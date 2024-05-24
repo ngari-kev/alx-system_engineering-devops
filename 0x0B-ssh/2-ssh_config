@@ -1,0 +1,5 @@
+#SSH Client config
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+    PreferredAuthentications publickey
