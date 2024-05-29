@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #A script that accepts 4 params and copies a file to my server
 # scp must transfer the file to the user home directory ~/
 #Strict host key checking must be disabled when using scp
