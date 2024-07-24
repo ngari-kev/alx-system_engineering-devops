@@ -1,19 +1,41 @@
 #!/usr/bin/env bash
 
-# Create the nginx user if no such user exists
+# Ensure the script is run as a superuser
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root" >&2
+    exit 1
+fi
+
+# Create the nginx user if it doesn't exist
 if ! id -u nginx > /dev/null 2>&1; then
     useradd -r nginx
 fi
 
-# Update the Nginx configuration file
-NGINX_CONFIG_FILE="/etc/nginx/nginx.conf"
+# Ensure necessary write permissions
+chmod ugo+wr /etc/nginx/nginx.conf /etc/nginx/sites-available/default
 
-# Create a backup of the original configuration file
-cp "$NGINX_CONFIG_FILE" "$NGINX_CONFIG.bak"
+# Disable Apache from listening on port 8080
+if [ -f /etc/apache2/ports.conf ]; then
+    sed -i 's/Listen 8080/#Listen 8080/g' /etc/apache2/ports.conf
+fi
 
-# Modify the configuration
-sed -i 's/^user .*/user nginx;/g' "$NGINX_CONFIG_FILE"
-sed -i 's/listen 80;/listen 8080;/g' "$NGINX_CONFIG_FILE"
+# Configure Nginx to run as nginx user and listen on port 8080
+sed -i 's/^user .*/user nginx;/g' /etc/nginx/nginx.conf
+sed -i 's/listen 80;/listen 8080;/g' /etc/nginx/sites-available/default
 
-# Start Nginx as the nginx user
-nginx -g 'daemon off;'
+# Reload Apache configuration to apply changes
+if pidof apache2 > /dev/null; then
+    pkill -1 apache2
+fi
+
+# Restart Nginx as the nginx user
+sudo -u nginx nginx -s stop
+sudo -u nginx nginx
+
+# Confirm Nginx is running as expected
+if pgrep -u nginx nginx > /dev/null; then
+    echo "Nginx is running as nginx on port 8080"
+else
+    echo "Failed to start Nginx as nginx user" >&2
+    exit 1
+fi
