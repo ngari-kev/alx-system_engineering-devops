@@ -9,3 +9,7 @@ Should you want to install mysql 5.7, click [here](https://docs.google.com/docum
 ### Task 0
 
 Install mysql 5.7 on `web_01` and `web_02`
+
+# THE PROCESS OF CREATING A PRIMARY REPLICA SETUP.
+
+Coming up shortly...
