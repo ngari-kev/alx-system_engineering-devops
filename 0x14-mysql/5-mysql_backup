@@ -13,27 +13,9 @@ PASSWORD=$1
 # Get the current date in day-month-year format
 DATE=$(date +%d-%m-%Y)
 
+mysqldump -u root -p"$PASS" --all-databases > backup.sql
+
 # Define the backup file name
-BACKUP_FILE="backup.sql"
 ARCHIVE_FILE="$DATE.tar.gz"
 
-# Generate the MySQL dump
-mysqldump -u root -p"$PASSWORD" --all-databases > "$BACKUP_FILE"
-
-# Check if mysqldump was successful
-if [ $? -eq 0 ]; then
-  # Create a compressed archive of the dump
-  tar -czf "$ARCHIVE_FILE" "$BACKUP_FILE"
-
-  # Check if the archive was successfully created
-  if [ $? -eq 0 ]; then
-    echo "Backup and compression successful: $ARCHIVE_FILE"
-    # Remove the backup file after compression
-    rm "$BACKUP_FILE"
-  else
-    echo "Error: Failed to create the compressed archive."
-  fi
-else
-  echo "Error: Failed to create MySQL dump."
-fi
-
+tar -czvf "$ARCHIVE_FILE" backup.sql
