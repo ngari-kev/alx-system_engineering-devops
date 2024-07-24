@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Create the nginx user if no such user exists
+if ! id -u nginx > /dev/null 2>&1; then
+    useradd -r nginx
+fi
+
+# Update the Nginx configuration file
+NGINX_CONFIG_FILE="/etc/nginx/nginx.conf"
+
+# Create a backup of the original configuration file
+cp "$NGINX_CONFIG_FILE" "$NGINX_CONFIG.bak"
+
+# Modify the configuration
+sed -i 's/^user .*/user nginx;/g' "$NGINX_CONFIG_FILE"
+sed -i 's/listen 80;/listen 8080;/g' "$NGINX_CONFIG_FILE"
+
+# Start Nginx as the nginx user
+nginx -g 'daemon off;'
