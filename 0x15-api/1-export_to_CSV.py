@@ -14,7 +14,7 @@ if __name__ == "__main__":
     empl_id = sys.argv[1]
     empl_url = '{}users/{}'.format(url_header, empl_id)
     empl_response = requests.get(empl_url)
-    empl_name = empl_response.json().get('name')
+    empl_name = empl_response.json().get('username')
 
     todoList_url = '{}todos?userId={}'.format(url_header, empl_id)
     todoList_response = requests.get(todoList_url)
