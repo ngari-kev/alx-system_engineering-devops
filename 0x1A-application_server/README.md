@@ -1,6 +1,6 @@
 # 0x1A-application_server
 
-<img src=https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/9/c7d1ed0a2e10d1b4e9b3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240822%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240822T095425Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=bd886e5aa02e76e64452b44401f5a71cd08e0f7f5ab5f2041975711f1cbf169d>
+<img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/9/c7d1ed0a2e10d1b4e9b3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240822%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240822T095425Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=bd886e5aa02e76e64452b44401f5a71cd08e0f7f5ab5f2041975711f1cbf169d">
 
 ## Resources
 
